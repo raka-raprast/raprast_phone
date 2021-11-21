@@ -1,0 +1,36 @@
+parts {
+  device {
+    display {
+      width 720
+      height 1600
+      x 10
+      y 13
+    }
+  }
+  portrait {
+    background {
+      image port_back.png
+    }
+    foreground {
+      mask    round_corners.png
+    }
+  }
+}
+layouts {
+  portrait {
+    width 760
+    height 1651
+    color 0x000000
+    event EV_SW:0:1
+    part1 {
+      name portrait
+      x 0
+      y 0
+    }
+    part2 {
+      name device
+      x 12
+      y 12
+    }
+  }
+}
